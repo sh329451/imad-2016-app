@@ -7,7 +7,7 @@ app.use(morgan('combined'));
 
 
 var articles={
-articleOne :{
+'article-one' :{
     title:'Shashank bajpai article-one',
   heading:'Article one',
      date:'Sept 5,2016',
@@ -22,7 +22,7 @@ articleOne :{
                     This is the content we want in my website. its good to learn code and web development in the nptel through imad a good initiative taken by both the institute and entreprenaur to make it successful we want more pepole to come and join us dont fear coding its just a simple any one can learn coding 
                 </p> `
 },
-articleTwo :{
+'article-two' :{
  title:'Shashank bajpai article-one',
   heading:'Article two',
      date:'Sept 15,2016',
@@ -32,7 +32,7 @@ articleTwo :{
                 </p>
                 `
 },
-articleThree:{ title:'Shashank bajpai article-one',
+'article-three':{ title:'Shashank bajpai article-one',
   heading:'Article three',
      date:'Sept 10,2016',
   content:
@@ -84,7 +84,7 @@ app.get('/article-one', function(req,res){
 
 
 app.get('/article-two', function(req,res){
-   res.send(createTemplate(articleOne));   
+   res.send(createTemplate(articles[articleName]));   
 });
 
 
