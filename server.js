@@ -6,7 +6,7 @@ var app = express();
 app.use(morgan('combined'));
 
 
-var content ={
+var articleOne ={
     title:'Shashank bajpai article-one',
   heading:'Article one',
      date:'Sept 5,2016',
@@ -21,6 +21,11 @@ var content ={
                     This is the content we want in my website. its good to learn code and web development in the nptel through imad a good initiative taken by both the institute and entreprenaur to make it successful we want more pepole to come and join us dont fear coding its just a simple any one can learn coding 
                 </p> `
 };
+function createTemplate(data){
+var title = data.title;
+var heading = data.heading;
+var date = data.date;
+var content = data.content;
 var htmlTemplate= `<html>
     <head>
         <title>
@@ -45,6 +50,8 @@ var htmlTemplate= `<html>
                 </div>
                 </body>
 </html>`
+return htmlTemplate
+}
 
 app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
