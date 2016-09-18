@@ -22,7 +22,9 @@ articleOne :{
                     This is the content we want in my website. its good to learn code and web development in the nptel through imad a good initiative taken by both the institute and entreprenaur to make it successful we want more pepole to come and join us dont fear coding its just a simple any one can learn coding 
                 </p> `
 },
-articleTwo : title:'Shashank bajpai article-one',
+articleTwo :{
+    
+ title:'Shashank bajpai article-one',
   heading:'Article two',
      date:'Sept 15,2016',
   content:
