@@ -23,7 +23,6 @@ articleOne :{
                 </p> `
 },
 articleTwo :{
-    
  title:'Shashank bajpai article-one',
   heading:'Article two',
      date:'Sept 15,2016',
