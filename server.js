@@ -5,6 +5,23 @@ var path = require('path');
 var app = express();
 app.use(morgan('combined'));
 
+
+var content ={
+    title:'Shashank bajpai article-one',
+  heading:'Article one',
+     date:'Sept 5,2016',
+  content:
+            ` <p>
+                    This is the content we want in my website. its good to learn code and web development in the nptel through imad a good initiative taken by both the institute and entreprenaur to make it successful we want more pepole to come and join us dont fear coding its just a simple any one can learn coding 
+                </p>
+                 <p>
+                    This is the content we want in my website. its good to learn code and web development in the nptel through imad a good initiative taken by both the institute and entreprenaur to make it successful we want more pepole to come and join us dont fear coding its just a simple any one can learn coding 
+                </p>
+                 <p>
+                    This is the content we want in my website. its good to learn code and web development in the nptel through imad a good initiative taken by both the institute and entreprenaur to make it successful we want more pepole to come and join us dont fear coding its just a simple any one can learn coding 
+                </p> `
+}
+
 app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
