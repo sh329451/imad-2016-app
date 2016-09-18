@@ -6,7 +6,8 @@ var app = express();
 app.use(morgan('combined'));
 
 
-var articleOne ={
+var articles={
+articleOne :{
     title:'Shashank bajpai article-one',
   heading:'Article one',
      date:'Sept 5,2016',
@@ -20,6 +21,25 @@ var articleOne ={
                  <p>
                     This is the content we want in my website. its good to learn code and web development in the nptel through imad a good initiative taken by both the institute and entreprenaur to make it successful we want more pepole to come and join us dont fear coding its just a simple any one can learn coding 
                 </p> `
+},
+articleTwo : title:'Shashank bajpai article-one',
+  heading:'Article two',
+     date:'Sept 15,2016',
+  content:
+            ` <p>
+                    This is the content we want in my website. its good to learn code and web development in the nptel through imad a good initiative taken by both the institute and entreprenaur to make it successful we want more pepole to come and join us dont fear coding its just a simple any one can learn coding 
+                </p>
+                `
+},
+articleThree:{ title:'Shashank bajpai article-one',
+  heading:'Article three',
+     date:'Sept 10,2016',
+  content:
+            ` <p>
+                    This is the content we want in my website. its good to learn code and web development in the nptel through imad a good initiative taken by both the institute and entreprenaur to make it successful we want more pepole to come and join us dont fear coding its just a simple any one can learn coding 
+                </p>
+                `
+},
 };
 function createTemplate(data){
 var title = data.title;
@@ -63,7 +83,7 @@ app.get('/article-one', function(req,res){
 
 
 app.get('/article-two', function(req,res){
-   res.sendFile(path.join(__dirname, 'ui', 'article-two.html'));    
+   res.send(createTemplate(articleOne));   
 });
 
 
