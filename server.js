@@ -23,7 +23,7 @@ var articles={
                 </p> `
 },
 'article-two' :{
- title:'Shashank bajpai article-one',
+ title:'Shashank bajpai article-two',
   heading:'Article two',
      date:'Sept 15,2016',
   content:
@@ -32,7 +32,7 @@ var articles={
                 </p>
                 `
 },
-'article-three':{ title:'Shashank bajpai article-one',
+'article-three':{ title:'Shashank bajpai article-three',
   heading:'Article three',
      date:'Sept 10,2016',
   content:
