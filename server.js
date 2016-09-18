@@ -20,7 +20,31 @@ var content ={
                  <p>
                     This is the content we want in my website. its good to learn code and web development in the nptel through imad a good initiative taken by both the institute and entreprenaur to make it successful we want more pepole to come and join us dont fear coding its just a simple any one can learn coding 
                 </p> `
-}
+};
+var htmlTemplate= `<html>
+    <head>
+        <title>
+            ${title}
+            </title>
+            <meta name= "viewpoint" content= "width-device-width,initial-scale=1"/>
+             <link href="/ui/style.css" rel="stylesheet" />
+            </head>
+            <body>
+                <div class="container">
+            <div>
+              <a href="/">Home</a>
+                 </div>
+                <hr/>
+                ${heading}
+                <div>
+                ${date}
+                </div>
+                <div>
+               ${content}
+                </div>
+                </div>
+                </body>
+</html>`
 
 app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
