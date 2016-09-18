@@ -78,6 +78,87 @@ return htmlTemplate;
 app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
+
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+var htmlTemplate= 
+`<html>
+    <head>
+        <title>
+            ${title}
+            </title>
+            <meta name= "viewpoint" content= "width-device-width,initial-scale=1"/>
+             <link href="/ui/style.css" rel="stylesheet" />
+            </head>
+            <body>
+                <div class="container">
+            <div>
+              <a href="/">Home</a>
+                 </div>
+                <hr/>
+                ${heading}
+                <div>
+                ${date}
+                </div>
+                <div>
+               ${content}
+                </div>
+                </div>
+                </body>
+</html>`;
+return htmlTemplate;
+}
+app.get('/', function (req, res) {
+  res.sendFile(path.join(__dirname, 'ui', 'index.html'));
+});
+app.get('/:articleName', function(req,res){
+    var articleName = req.param.articleName;
+   res.send(createTemplate(articles[articleName])); 
+   
+});
+app.get('/ui/style.css', function (req, res) {
+  res.sendFile(path.join(__dirname, 'ui', 'style.css'));
+
 
 app.get('/:articleName', function(req,res){
     var articleName = req.param.articleName;
