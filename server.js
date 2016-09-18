@@ -46,7 +46,8 @@ var title = data.title;
 var heading = data.heading;
 var date = data.date;
 var content = data.content;
-var htmlTemplate= `<html>
+var htmlTemplate= 
+`<html>
     <head>
         <title>
             ${title}
@@ -69,8 +70,8 @@ var htmlTemplate= `<html>
                 </div>
                 </div>
                 </body>
-</html>`
-return htmlTemplate
+</html>`;
+return htmlTemplate;
 }
 
 app.get('/', function (req, res) {
